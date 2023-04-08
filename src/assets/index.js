@@ -6,6 +6,13 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import s from "./s.png";
+import covid1 from "./covid.png";
+import brain from "./brain.png";
+import bj from "./bj.png";
+import airbnb from "./airbnb.png";
+import face from "./face.png";
+
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -20,11 +27,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import firebase from './tech/firebase.png';
+import php from "./tech/php.png";
+import sql from "./tech/sql.png";
+import mysql from "./tech/mysql.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import aequitas from "./company/aequitas.png";
+
+import vit from './edu/vit.png';
+import ihs from './edu/ihs.png';
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -32,6 +47,8 @@ import tripguide from "./tripguide.png";
 
 export {
   logo,
+  s,
+  firebase,
   backend,
   creator,
   mobile,
@@ -53,10 +70,21 @@ export {
   typescript,
   threejs,
   meta,
+  aequitas,
   shopify,
   starbucks,
   tesla,
   carrent,
   jobit,
   tripguide,
+  vit,
+  ihs,
+  php,
+  sql,
+  mysql,
+  covid1,
+  brain,
+  airbnb,
+  bj,
+  face
 };

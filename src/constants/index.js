@@ -3,6 +3,7 @@ import {
   backend,
   creator,
   web,
+  firebase,
   javascript,
   typescript,
   html,
@@ -13,16 +14,20 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  php,
+  sql,
+  mysql,
   carrent,
   jobit,
   tripguide,
-  threejs,
+  vit,
+  ihs,
+  aequitas,
+  face,
+  bj,
+  airbnb,
+  brain,
+  covid1
 } from "../assets";
 
 export const navLinks = [
@@ -31,8 +36,16 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "Education",
+    title: "Education",
+  },
+  {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -42,19 +55,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Front-End Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Back-End Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Problem Solving",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software Developement",
     icon: creator,
   },
 ];
@@ -73,23 +86,27 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "MySQL",
+    icon: sql,
+  },
+  {
+    name: "SQLite",
+    icon: mysql,
+  },
+  {
+    name: "NodeJs",
     icon: nodejs,
   },
   {
@@ -97,74 +114,63 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+    name: "firebase",
+    icon: firebase,
+  }
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "Aequitas Victoria Foundation",
+    icon: aequitas,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "September 2021 - March 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Work on main and other websites",
+      "Manage affairs & coordinate with different teams of the Aequitas Victoria Foundation",
+      "Give suggestions related to web development",
+      "Develop a new website for our projects",
+    ],
+  }
+];
+
+const education = [
+  {
+    title: "Vellore Institute of Technology, Vellore",
+    company_name: "B.Tech Computer Science and Engineering",
+    icon: vit,
+    iconBg: "#383E56",
+    date: "August 2020 - Present",
+    points: [
+      "CGPA: 8.65 (Upto 5th Semester)",
+      "Courseworks: Data Structures and Algorithms, Design and Analysis of Algorithms, Operating System, Database Management System, Network and Communications, Object-Oriented Programming",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "The Indian High School Dubai, Dubai",
+    company_name: "Class 12th, CBSE",
+    icon: ihs,
+    iconBg: "#383E56",
+    date: "2019 - 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Percentage: 93%",
+      "Stream: Physics, Chemistry, Mathematics, Computer Science, English",
+    ],
+  },
+  {
+    title: "The Indian High School Dubai, Dubai",
+    company_name: "Class 10th, CBSE",
+    icon: ihs,
+    iconBg: "#383E56",
+    date: "2017 - 2018",
+    points: [
+      "Percentage: 92.2%",
+      "Stream: Science and Maths",
     ],
   },
 ];
@@ -172,94 +178,169 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "I was blown away by Shivam's technical skills and ability to work collaboratively on complex projects. His attention to detail and willingness to share his knowledge and expertise made him/her an invaluable member of our team. I look forward to working with Shivam again in the future.",
+    name: "Saraswathi B",
+    designation: "Student",
+    company: "VIT",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "I've had the pleasure of collaborating with Shivam on multiple occasions and have always been impressed with their professionalism and expertise. He has an eye for design and is able to bring even the most complex ideas to fruition.",
+    name: "Arnav Srivastav",
+    designation: "Student",
+    company: "VIT",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "As a computer science student, Shivam has a natural curiosity for learning and exploring new technologies. I have had the pleasure of watching him/her grow from a curious beginner to a confident and skilled developer. His passion for coding and problem-solving is truly inspiring",
+    name: "Ashwin Lakhani",
+    designation: "Student",
+    company: "NSUT",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "MediCare - DBMS Based Healthcare Portal",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An end to end Database focused portal for patient registration, organizing information and fixing appointments with healthcare professionals. Medical care website consists of three panels: Admin, Pharmacist and Patient.",
     tags: [
       {
-        name: "react",
+        name: "Html",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Css",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Javascript",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Php",
+        color: "blue-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/shiv35674/iwpProject",
   },
   {
-    name: "Job IT",
+    name: "Face Anonymization System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Anonymize face of an indiviual in a video to protect its privacy. Blurred face of an indiviual using Gaussian Blur Function and Haar Cascade classifier for face detection of an indiviual. Login and Sign up has also been included for Authentication.",
     tags: [
       {
-        name: "react",
+        name: "Python(Flask)",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Html",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Css",
         color: "pink-text-gradient",
       },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
       {
-        name: "nextjs",
+        name: "Javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "SqlLite",
+        color: "green-text-gradient",
+      },
+    ],
+    image: face,
+    source_code_link: "https://covid-19-tracker-72f63.web.app/",
+  },
+  {
+    name: "Brain Tumor Detection",
+    description:
+      "Detection of Brain Tumor using Image Segmentation and Convolution Neural Networks. Updated and Enhanced the previous function for better performance, result and accuracy.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: brain,
+    source_code_link: "https://github.com/shiv35674/Brain-Tumor-Detection",
+  },
+  {
+    name: "Covid-19 Tracker",
+    description:
+      "Is a React-based website that keeps track of coronavirus cases across the world. Rapid API call to fetch data of coronavirus cases couuntry wise.",
+    tags: [
+      {
+        name: "React Hooks",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Material UI",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: covid1,
+    source_code_link: "https://covid-19-tracker-72f63.web.app/",
+  },
+  {
+    name: "Airbnb Clone",
+    description:
+      "Is a clone of an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities. Included Calendar Picker for selecting dates and Mapbox Integration to get location of the stay.",
+    tags: [
+      {
+        name: "React Hooks",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Material UI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: airbnb,
+    source_code_link: "https://github.com/shiv35674/airbnb-clone",
+  },
+  {
+    name: "BlackJack Game",
+    description:
+      "Blackjack is an enormously popular card game, with millions of fans playing it online across the globe. One of the main reasons for its popularity is that it’s so simple to play.",
+    tags: [
+      {
+        name: "Html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: bj,
+    source_code_link: "https://blackjack-fawn.vercel.app/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, education };
