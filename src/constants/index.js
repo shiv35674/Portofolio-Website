@@ -125,6 +125,19 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Software Developer Intern",
+    company_name: "Syscom Distributions LLC",
+    icon: aequitas,
+    iconBg: "#383E56",
+    date: "May 2023 - July 2023",
+    points: [
+      "Work on Dubai, Oman, Qatar, and Saudi Websites.",
+      "Creating an effective Web Interface for an E-commerce Platform.",
+      "Testing software for usability, performance, and reliability.",
+      "Coordinate with different teams and participate in meetings to understand our requirements.",
+    ],
+  },
+  {
     title: "Web Developer",
     company_name: "Aequitas Victoria Foundation",
     icon: aequitas,
@@ -147,7 +160,7 @@ const education = [
     iconBg: "#383E56",
     date: "August 2020 - Present",
     points: [
-      "CGPA: 8.65 (Upto 5th Semester)",
+      "CGPA: 8.76 (Upto 6th Semester)",
       "Courseworks: Data Structures and Algorithms, Design and Analysis of Algorithms, Operating System, Database Management System, Network and Communications, Object-Oriented Programming",
     ],
   },
